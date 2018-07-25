@@ -1,0 +1,22 @@
+{
+  "name": "slackbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comatik/slackBot.git"
+  },
+  "author": "Propulse-Lab",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/comatik/slackBot/issues"
+  },
+  "homepage": "https://github.com/comatik/slackBot#readme",
+  "dependencies": {
+    "@slack/client": "^4.3.1"
+  }
+}
