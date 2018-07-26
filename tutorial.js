@@ -1,9 +1,17 @@
 const math = require('mathjs')
 var sendSlackMessage = require("./main.js");
+const zuoraRequest = require("./zuora.js")
 
-try {
-    math.log(1000, a)
-} catch (error) {
-    
-sendSlackMessage.sendMessageError(error);    
-}
+var valideResponse= function (response){
+    console.log(response)
+  if (!response.sucess) {
+    sendSlackMessage.sendMessageError(response.reasons[0].message);
+  }
+  }
+
+zuoraRequest.zuoraRequest(valideResponse, 'GET','v1/orders/',true)
+
+
+
+
+

@@ -25,6 +25,8 @@
     "is-number": "^7.0.0",
     "mathjs": "^5.0.4",
     "package-info": "^3.0.1",
-    "pkginfo": "^0.4.1"
+    "pkginfo": "^0.4.1",
+    "request": "^2.87.0",
+    "slack-webhook": "^1.0.0"
   }
 }
