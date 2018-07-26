@@ -5,5 +5,5 @@ try {
     math.log(1000, a)
 } catch (error) {
     
+sendSlackMessage.sendMessageError(error);    
 }
-

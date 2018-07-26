@@ -10,7 +10,8 @@ const Notification = new IncomingWebhook(process.env.SLACK_WEBHOOK_URL);
  path2 = currentDir();
  currentDate = mydate();
 
- function sendMessageError(error) {
+
+function sendMessageError(error) {
     Notification.send(`
     ********* *${currentDate}* *********
     _An error has been catch, here's some information about that_
@@ -20,5 +21,15 @@ const Notification = new IncomingWebhook(process.env.SLACK_WEBHOOK_URL);
     *The current error is    :* ${error}` 
     )
  } 
+
+ function sendMessageSucess (error){
+
+ }
+
+ function  sendCustomMessage(message){
+
+ }
+
+
  
  module.exports.sendMessageError = sendMessageError;  
