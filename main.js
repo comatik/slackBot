@@ -4,17 +4,19 @@ const { IncomingWebhook, WebClient } = require('@slack/client');
 const currentDir  = require('current-dir');
 const mydate = require('current-date');
 const path = require('path');
+
 const packageInfo = require('./package.json');
 const web = new WebClient(process.env.SLACK_TOKEN);
-const Notification = new IncomingWebhook(process.env.SLACK_WEBHOOK_URL);
+const Notification = new IncomingWebhook('https://hooks.slack.com/services/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');
  path2 = currentDir();
  currentDate = mydate();
 
 
 function sendMessageError(error) {
+    console.log(error);
     Notification.send(`
     ********* *${currentDate}* *********
-    _An error has been catch, here's some information about that_
+    _An error has been catch, here's some information about it_
     *the current folder is   :* ${path2}
     *The project's name is   :* ${packageInfo.name}
     *version                 :* ${packageInfo.version}
@@ -22,7 +24,7 @@ function sendMessageError(error) {
     )
  } 
 
- function sendMessageSucess (error){
+ function sendMessageSucess(){
 
  }
 
