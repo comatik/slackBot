@@ -1,5 +1,4 @@
-const math = require('mathjs')
-var sendSlackMessage = require("./main.js");
+var sendSlackMessage = require("./main.js")
 const zuoraRequest = require("./zuora.js")
 
 var valideResponse= function (response){
